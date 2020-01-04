@@ -31,6 +31,7 @@ const shopReducer = (state = initialState, action) => {
         updatedCart[updatedItemIndex] = updatedItem;
       }
       return { ...state, cart: updatedCart };
+
     case REMOVE_PRODUCT_FROM_CART:
       updatedCart = [...state.cart];
       updatedItemIndex = updatedCart.findIndex(
@@ -48,6 +49,7 @@ const shopReducer = (state = initialState, action) => {
       }
 
       return { ...state, cart: updatedCart };
+
     default:
       return state;
   }
